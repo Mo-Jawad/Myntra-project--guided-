@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
+}
+header {
+  display: flex;
+  background-color: rgb(209, 165, 209);
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+#myntra_home {
+  height: 36px;
+  width: 53px;
+}
+.logo {
+  margin-left: 4%;
+}
+.action_bar {
+  margin-right: 4%;
+}
+.nav_bar > a > sup {
+  color: brown;
+  font-size: 10px;
+}
+.nav_bar > a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(27, 25, 25);
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+.nav_bar {
+  display: flex;
+  min-width: 500px;
+  justify-content: space-between;
+}
