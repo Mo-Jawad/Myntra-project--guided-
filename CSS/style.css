@@ -78,13 +78,19 @@ header {
   display: flex;
   min-width: 200px;
   justify-content: space-around;
+  /* align-content: center; */
 }
 .action_container {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
   cursor: pointer;
+  text-decoration: none;
+}
+
+a.action_container:link {
+  color: black;
 }
 .action_icon {
   font-size: 24px;
@@ -160,6 +166,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: space-evenly;
 }
 
 .item-con {
@@ -239,5 +246,22 @@ header {
   border: none;
   padding: 5px 15px;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.bag-item-count {
+  background-color: #f16565;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 18px;
+  padding: 0 6px;
+  height: 18px;
+  position: relative;
+  border-radius: 50%;
+  font-size: 12px;
+  color: #fff;
+  left: 13px;
+  top: -44px;
+  font-weight: 700;
   cursor: pointer;
 }

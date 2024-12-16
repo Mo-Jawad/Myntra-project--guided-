@@ -1,4 +1,37 @@
+let bagItem;
+onLoad();
+
+
+function onLoad() {
+  let bagItemStr = localStorage.getItem("bagItems");
+  bagItem = bagItemStr ? JSON.parse(bagItemStr) : [];
+  displayHomePage();
+  displayBagIcon();
+}
+
+
+let addToBag = (itemId) => {
+  bagItem.push(itemId);
+  localStorage.setItem("bagItems", JSON.stringify(bagItem));
+  displayBagIcon();
+}
+
+function displayBagIcon() {
+  const bagItemCountEl = document.querySelector(".bag-item-count");
+  if(bagItem.length > 0) {
+    bagItemCountEl.style.visibility = "visible";
+  bagItemCountEl.innerText = bagItem.length;
+  } else {
+    bagItemCountEl.style.visibility = "hidden";
+  }
+};
+
+function displayHomePage() {
 const itemsContainerEl = document.querySelector('.items-container');
+
+if (!itemsContainerEl) {
+  return;
+}
 
 let innerHtml = '';
 items.forEach(item => {
@@ -14,8 +47,10 @@ items.forEach(item => {
             <span class="discount">(${item.discount_percentage}% OFF)</span>
           </section>
 
-          <button class="btn-add-bag">Add to Bag</button>
+          <button class="btn-add-bag" onClick="addToBag(${item.id})">Add to Bag</button>
         </div>`;
 })
 
 itemsContainerEl.innerHTML = innerHtml;
+
+}
