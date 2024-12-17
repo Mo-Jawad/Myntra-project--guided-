@@ -132,5 +132,8 @@
   right: 18px;
   width: 14px;
   height: 14px;
+}
+
+.remove-from-cart {
   cursor: pointer;
 }
