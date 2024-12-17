@@ -89,9 +89,17 @@ header {
   text-decoration: none;
 }
 
-a.action_container:link {
+a.action_container:link,
+a.action_container:active,
+a.action_container {
   color: black;
 }
+
+a.action_container:hover {
+  color: #f16565;
+  /* animation: 1.5s ease; */
+}
+
 .action_icon {
   font-size: 24px;
 }
